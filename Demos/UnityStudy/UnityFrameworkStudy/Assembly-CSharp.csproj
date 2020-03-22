@@ -54,9 +54,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ProjectBase\Base\BaseManager.cs" />
+     <Compile Include="Assets\Scripts\ProjectBase\Event\EventCenter.cs" />
+     <Compile Include="Assets\Scripts\ProjectBase\Mono\MonoController.cs" />
+     <Compile Include="Assets\Scripts\ProjectBase\Mono\MonoManager.cs" />
      <Compile Include="Assets\Scripts\ProjectBase\Pool\PoolManager.cs" />
-     <Compile Include="Assets\Scripts\Test\Dely.cs" />
-     <Compile Include="Assets\Scripts\Test\Test.cs" />
+     <Compile Include="Assets\Scripts\ProjectBase\Scenes\ScenesManager.cs" />
+     <Compile Include="Assets\Scripts\Test\Event\Monster.cs" />
+     <Compile Include="Assets\Scripts\Test\Event\Other.cs" />
+     <Compile Include="Assets\Scripts\Test\Event\Player.cs" />
+     <Compile Include="Assets\Scripts\Test\Event\Task.cs" />
+     <Compile Include="Assets\Scripts\Test\Mono\MonoTest.cs" />
+     <Compile Include="Assets\Scripts\Test\Pool\Dely.cs" />
+     <Compile Include="Assets\Scripts\Test\Pool\Test.cs" />
+     <Compile Include="Assets\Scripts\Test\Scenes\SceneChangeTest.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/Source Tree/demos/Demos/UnityStudy/UnityFrameworkStudy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
