@@ -53,20 +53,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ProjectBase\Audio\AudioManager.cs" />
      <Compile Include="Assets\Scripts\ProjectBase\Base\BaseManager.cs" />
      <Compile Include="Assets\Scripts\ProjectBase\Event\EventCenter.cs" />
+     <Compile Include="Assets\Scripts\ProjectBase\Input\InputManager.cs" />
      <Compile Include="Assets\Scripts\ProjectBase\Mono\MonoController.cs" />
      <Compile Include="Assets\Scripts\ProjectBase\Mono\MonoManager.cs" />
      <Compile Include="Assets\Scripts\ProjectBase\Pool\PoolManager.cs" />
+     <Compile Include="Assets\Scripts\ProjectBase\Res\ResourcesManager.cs" />
      <Compile Include="Assets\Scripts\ProjectBase\Scenes\ScenesManager.cs" />
+     <Compile Include="Assets\Scripts\ProjectBase\UI\BasePanel.cs" />
+     <Compile Include="Assets\Scripts\ProjectBase\UI\UIManager.cs" />
+     <Compile Include="Assets\Scripts\Test\Audio\AudioTest.cs" />
      <Compile Include="Assets\Scripts\Test\Event\Monster.cs" />
      <Compile Include="Assets\Scripts\Test\Event\Other.cs" />
      <Compile Include="Assets\Scripts\Test\Event\Player.cs" />
      <Compile Include="Assets\Scripts\Test\Event\Task.cs" />
+     <Compile Include="Assets\Scripts\Test\Input\InputTest.cs" />
      <Compile Include="Assets\Scripts\Test\Mono\MonoTest.cs" />
      <Compile Include="Assets\Scripts\Test\Pool\Dely.cs" />
      <Compile Include="Assets\Scripts\Test\Pool\Test.cs" />
+     <Compile Include="Assets\Scripts\Test\Res\ResourcesTest.cs" />
      <Compile Include="Assets\Scripts\Test\Scenes\SceneChangeTest.cs" />
+     <Compile Include="Assets\Scripts\Test\UI\LoginPanel.cs" />
+     <Compile Include="Assets\Scripts\Test\UI\UIManagerTest.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/Source Tree/demos/Demos/UnityStudy/UnityFrameworkStudy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

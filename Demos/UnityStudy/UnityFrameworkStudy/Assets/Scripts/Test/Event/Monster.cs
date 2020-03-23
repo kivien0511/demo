@@ -35,6 +35,8 @@ public class Monster : MonoBehaviour {
 		// //加N个处理逻辑
 
 		//触发事件
-		EventCenter.GetInstance().EventTrigger("MonsterDead",this);
+		EventCenter.GetInstance().EventTrigger<Monster>("MonsterDead",this);
+	
+		EventCenter.GetInstance().EventTrigger("OtherSTH");
 	}
 }

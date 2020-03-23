@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// 抽屉数据
@@ -75,21 +76,25 @@ public class PoolManager : BaseManager<PoolManager> {
 	/// </summary>
 	/// <param name="name"></param>
 	/// <returns></returns>
-	public GameObject GetObj(string name)
+	public void GetObj(string name,UnityAction<GameObject> callback)
 	{
-		GameObject obj = null;
 		//有抽屉 并且抽屉里有东西
 		if(poolDic.ContainsKey(name) && poolDic[name].poolList.Count >0 )
 		{
-			obj = poolDic[name].GetObj();
+			callback(poolDic[name].GetObj());
 		}
 		else
-		{
-			obj = GameObject.Instantiate(Resources.Load<GameObject>(name));
+		{	
+			//通过异步加载资源 创建对象给外部用
+			ResourcesManager.GetInstance().LoadAsync<GameObject>(name,(o)=>{
+				o.name = name;
+				callback(o);
+			});
+
+			//obj = GameObject.Instantiate(Resources.Load<GameObject>(name));
 			//把对象名字改的和池子名字一样
-			obj.name = name;
+			//obj.name = name;
 		}
-		return obj;
 	}
 
 	/// <summary>

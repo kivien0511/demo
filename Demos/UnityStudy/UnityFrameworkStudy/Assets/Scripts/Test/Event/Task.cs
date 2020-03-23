@@ -6,20 +6,20 @@ public class Task : MonoBehaviour {
 
 	void Start()
 	{
-		EventCenter.GetInstance().AddEventLinster("MonsterDead",TaskWaitMonsterDeadDo);
+		EventCenter.GetInstance().AddEventLinster<Monster>("MonsterDead",TaskWaitMonsterDeadDo);
 	}
 
 	/// <summary>
 	/// 怪物死亡时要做些什么
 	/// </summary>
 	/// <param name="info"></param>
-	public void TaskWaitMonsterDeadDo(object info)
+	public void TaskWaitMonsterDeadDo(Monster info)
 	{
 		Debug.Log("任务记录");
 	}
 
 	void OnDestroy()
 	{
-		EventCenter.GetInstance().RemoveEventLinster("MonsterDead",TaskWaitMonsterDeadDo);
+		EventCenter.GetInstance().RemoveEventLinster<Monster>("MonsterDead",TaskWaitMonsterDeadDo);
 	}
 }

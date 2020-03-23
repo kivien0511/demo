@@ -9,7 +9,7 @@ public class SceneChangeTest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		EventCenter.GetInstance().AddEventLinster("Loading",loading);
+		EventCenter.GetInstance().AddEventLinster<object>("Loading",loading);
 		ScenesManager.GetInstance().LoadSceneAsyn("SampleScene",()=>{});
 		Debug.Log("SceneChangeTest");
 	}
